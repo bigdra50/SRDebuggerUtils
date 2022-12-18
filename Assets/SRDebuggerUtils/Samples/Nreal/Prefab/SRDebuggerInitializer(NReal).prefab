@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6974991280448406309}
   - component: {fileID: 3694996943191793520}
+  - component: {fileID: 1587645230}
   m_Layer: 0
   m_Name: SRDebuggerInitializer(NReal)
   m_TagString: Untagged
@@ -49,3 +50,17 @@ MonoBehaviour:
   _enableBillBoard: 1
   _enableHud: 1
   _hudCanvasPrefab: {fileID: 6756146270604273144, guid: 00b438d803d170a49ab1d96cea26708f, type: 3}
+--- !u!114 &1587645230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9191925128992304473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc67357e7fe249c38525d0b1804b0fc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _srDebuggerInitializer: {fileID: 3694996943191793520}
+  _controllerButton: 1
