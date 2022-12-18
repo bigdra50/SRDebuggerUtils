@@ -1,0 +1,17 @@
+{
+    "name": "SRDebuggerUtils.Runtime",
+    "rootNamespace": "",
+    "references": [
+        "GUID:02229f6652728da45838accf9ce93851",
+        "GUID:bcc75752368a72b4aba4043ea13b2a1a"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
