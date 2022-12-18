@@ -1,0 +1,28 @@
+{
+  "name": "jp.bigdra50.sr-debugger-utils",
+  "displayName": "SR Debugger Utils",
+  "version": "0.0.1",
+  "unity": "2021.3",
+  "description": "SR Debugger Utilities",
+  "author": {
+    "name": "bigdra50",
+    "url": "https://github.com/bigdra50"
+  },
+  "keywords": [
+  ],
+  "dependencies": {
+  },
+  "samples": [
+    {
+      "displayName": "Basic",
+      "description": "Basic Assets",
+      "path": "Samples/Nreal"
+    },
+    {
+      "displayName": "Nreal",
+      "description": "for Nreal Assets",
+      "path": "Samples/Nreal"
+      "path": "Samples/Nreal"
+    }
+  ]
+}
