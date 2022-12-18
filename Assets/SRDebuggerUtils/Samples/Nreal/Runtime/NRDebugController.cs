@@ -1,6 +1,8 @@
 ﻿using System;
-using NRKernal;
 using UnityEngine;
+#if NREAL
+using NRKernal;
+#endif
 
 namespace SRDebuggerUtils.Runtime
 {
