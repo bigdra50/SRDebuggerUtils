@@ -13,6 +13,7 @@ namespace SRDebuggerUtils.Runtime
 
         // meter
         [SerializeField] private float _scaleWidth = 1f;
+        [SerializeField] private float _distanceToCameraFromt = 1f;
         [SerializeField] private bool _enableBillBoard = true;
         [SerializeField] private bool _enableHud;
         [SerializeField] private HUDCanvas _hudCanvasPrefab;
@@ -40,20 +41,28 @@ namespace SRDebuggerUtils.Runtime
             {
                 var hudCanvas = Instantiate(_hudCanvasPrefab);
                 _rect.transform.SetParent(hudCanvas.transform);
-                _rect.transform.localPosition += Vector3.forward;
+                _rect.transform.localPosition += Vector3.forward * _distanceToCameraFromt;
             }
 
 
-#if NREAL
-            _rect.gameObject.AddComponent<CanvasRaycastTarget>();
+            // 他のSRTabsの初期化を待つ
             yield return null;
             var otherRaycasters = _rect.GetComponentsInChildren<GraphicRaycaster>(true);
             Debug.Log(otherRaycasters.Length);
-            // 他のSRTabsの初期化を待つ
+#if NREAL
+            //_rect.gameObject.AddComponent<CanvasRaycastTarget>();
             foreach (var graphicRaycaster in otherRaycasters)
             {
                 graphicRaycaster.gameObject.AddComponent<CanvasRaycastTarget>();
             }
+#endif
+#if OCULUS
+            //_rect.gameObject.AddComponent<OVRRaycaster>();
+            foreach (var graphicRaycaster in otherRaycasters)
+            {
+                var raycaster = graphicRaycaster.gameObject.AddComponent<OVRRaycaster>();
+            }
+
 #endif
             _initialized = true;
         }

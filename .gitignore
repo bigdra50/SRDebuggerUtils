@@ -91,3 +91,5 @@ node_modules/
 
 /[Aa]ssets/_ThirdParty/*
 /[Aa]ssets/_ThirdParty.meta
+/[Aa]ssets/Oculus/*
+/[Aa]ssets/Oculus.meta

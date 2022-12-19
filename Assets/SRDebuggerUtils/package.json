@@ -22,6 +22,11 @@
       "displayName": "Nreal",
       "description": "for Nreal Assets",
       "path": "Samples/Nreal"
+    },
+    {
+      "displayName": "Oculus",
+      "description": "for Oculus Assets",
+      "path": "Samples/Oculus"
     }
   ]
 }

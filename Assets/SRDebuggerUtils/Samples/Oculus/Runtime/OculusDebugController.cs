@@ -1,17 +1,17 @@
-﻿#if NREAL
+﻿#if OCULUS
 using System;
+using SRDebuggerUtils.Runtime;
 using UnityEngine;
-using NRKernal;
 
-namespace SRDebuggerUtils.Runtime
+namespace SRDebuggerUtils.Samples.Oculus
 {
-    public class NRDebugController : MonoBehaviour
+    public class OculusDebugController : MonoBehaviour
     {
         public event Action OnDoubleTaped = () => { };
         public event Action OnTripleTaped = () => { };
 
         [SerializeField] private SRDebuggerInitializer _srDebuggerInitializer;
-        [SerializeField] private ControllerButton _controllerButton = ControllerButton.TRIGGER;
+        [SerializeField] private OVRInput.RawButton _controllerButton = OVRInput.RawButton.RThumbstick;
 
         private bool _isDoubleTapStart;
         private float _doubleTapTime;
@@ -37,7 +37,7 @@ namespace SRDebuggerUtils.Runtime
             }
             else
             {
-                if (NRInput.GetButtonDown(_controllerButton) || Input.GetMouseButtonDown(1))
+                if (OVRInput.GetDown(_controllerButton) || Input.GetMouseButtonDown(1))
                 {
                     _isDoubleTapStart = true;
                 }
@@ -49,7 +49,7 @@ namespace SRDebuggerUtils.Runtime
             _doubleTapTime += Time.deltaTime;
             if (_doubleTapTime < .2f)
             {
-                if (NRInput.GetButtonDown(_controllerButton) || Input.GetMouseButtonDown(1))
+                if (OVRInput.GetDown(_controllerButton) || Input.GetMouseButtonDown(1))
                 {
                     _isDoubleTapStart = false;
                     OnDoubleTaped();
@@ -69,7 +69,7 @@ namespace SRDebuggerUtils.Runtime
             _tripleTapTime += Time.deltaTime;
             if (_tripleTapTime < .2f)
             {
-                if (NRInput.GetButtonDown(_controllerButton) || Input.GetMouseButtonDown(1))
+                if (OVRInput.GetDown(_controllerButton) || Input.GetMouseButtonDown(1))
                 {
                     _isTripleTapStart = false;
                     OnTripleTaped();
