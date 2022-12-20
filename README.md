@@ -1,6 +1,6 @@
 # SRDebuggerUtils
 
-SRDebugger is a useful tool for debugging on mobile devices. 
+SRDebugger is a useful tool for debugging on mobile devices.   
 Samples in this package include Prefab, which displays the SRDebugger UI in the world space of various HMDs and AR glasses and can be interacted with by controllers.
 
 > **Note**  
