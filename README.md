@@ -26,5 +26,5 @@ NRSDK is not included in this package, so please import it by yourself.
 
 ### Oculus
 
-Triple-click the right thumbstick on the controller and the SRDebugger window will appear in world space.
+Triple-click the right thumbstick on the controller and the SRDebugger window will appear in world space.  
 Oculus Integration is not included in this package, so please import it by yourself.
